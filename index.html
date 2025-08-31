@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aalekh - Premium Streaming Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: #13151a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1d24 0%, #0f1115 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+        }
+        
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .carousel-container {
+            scroll-behavior: smooth;
+        }
+        
+        .nav-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 nav-gradient py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <div class="text-red-600 text-3xl font-bold">AALEKH</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-red-500 transition-colors">Home</a>
+                    <a href="#" class="hover:text-red-500 transition-colors">TV Shows</a>
+                    <a href="#" class="hover:text-red-500 transition-colors">Movies</a>
+                    <a href="#" class="hover:text-red-500 transition-colors">Kids</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="bg-gray-800 px-4 py-2 rounded-full text-sm w-32 lg:w-64 focus:w-64 transition-all duration-300 focus:outline-none">
+                    <i class="fas fa-search absolute right-3 top-2.5 text-gray-400"></i>
+                </div>
+                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <span class="text-sm font-semibold">A</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center">
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/82039cff-a0a1-490b-af6d-6e2953ad7dd7.png" alt="Epic sci-fi movie scene with futuristic cityscape and flying vehicles at golden hour" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 hero-content">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">The Future is Here</h1>
+                <p class="text-xl md:text-2xl mb-6 opacity-90">Experience the ultimate streaming adventure with Aalekh's exclusive content.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-play mr-2"></i>Watch Now
+                    </button>
+                    <button class="bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-info-circle mr-2"></i>More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Continue Watching -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Continue Watching</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e1a0467-505a-4d01-afe4-670b9753d58e.png" alt="Action thriller movie poster with main character in dramatic pose" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">The Last Stand</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e0b7b4b-8a7a-46d1-818b-40072975c537.png" alt="Romantic comedy movie poster with couple in embrace against city backdrop" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Love in Paris</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d9bda741-6482-4efb-b170-40b513ce83ab.png" alt="Sci-fi series poster with astronauts on alien planet" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Space Odyssey</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec34fdae-ba36-4f13-acf1-275b46b04499.png" alt="Fantasy adventure movie poster with dragon and warriors" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Dragon's Realm</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/962c117a-d57c-4c9e-be05-e3c67e16b20f.png" alt="Crime drama series poster with detectives investigating" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Dark Investigations</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f5f794b1-0184-4067-9e3d-b38868b7c302.png" alt="Animated family movie poster with colorful characters" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Fantasy Island</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Movies -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Popular Movies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71308f2f-6e87-4d65-8af2-7ee9aea07142.png" alt="Action movie with car chase through neon-lit city streets" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Neon Drift</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e4c39ae-7186-441b-a023-360559f8981e.png" alt="Drama film with emotional courtroom scene" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Justice Served</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aad290a7-635d-485a-8417-8e05ae8264e1.png" alt="Historical epic with grand battle scenes" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Kingdom's Fall</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48d8ad46-8669-4ae5-af6f-8bfa71952f77.png" alt="Horror movie with eerie mansion setting" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Whispering Walls</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fd3a6eef-4bd7-46bb-bbee-82b7019ddc28.png" alt="Adventure film exploring ancient ruins" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Lost Temple</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/102a03ce-b1ab-4be5-8bc1-26cedd76884d.png" alt="Comedy with ensemble cast in wacky situations" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Crazy Weekend</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TV Shows -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">TV Shows</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/54d80e9b-c618-4a4f-90d8-de7c5f0232ea.png" alt="Medical drama series with doctors in hospital setting" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Emergency Room</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91c21c74-07f9-4f8d-b6ba-a4ce4f4fcca6.png" alt="Political thriller with tense debates and power struggles" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Power Games</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c99a537e-e9f5-456c-ad0f-7968c66aefbb.png" alt="Superhero series with team of heroes in action" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Guardian Force</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/11c36127-b912-437d-b84d-09292814f8f5.png" alt="Mystery series with detective solving complex cases" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Cold Case Files</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bf197dd8-7b37-4f03-a0ed-36f10845de33.png" alt="Fantasy series with magical creatures and kingdoms" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Realm of Magic</p>
+                </div>
+                <div class="content-card cursor-pointer">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/78868335-fcf5-45ee-b49e-d19631272a81.png" alt="Reality competition show with dramatic challenges" class="w-full h-48 object-cover rounded-lg">
+                    <p class="mt-2 text-sm truncate">Ultimate Challenge</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aalekh Originals -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Aalekh Originals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="content-card cursor-pointer rounded-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/147cdcad-5fc2-4741-b383-c7cdccbc6263.png" alt="Exclusive sci-fi series with advanced technology and AI" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-gray-800">
+                        <h3 class="font-semibold mb-2">Digital Frontier</h3>
+                        <p class="text-sm text-gray-300">Aalekh Original Series</p>
+                    </div>
+                </div>
+                <div class="content-card cursor-pointer rounded-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9fad19a-81c4-43d3-986e-808b0df86106.png" alt="Crime drama with undercover operations and suspense" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-gray-800">
+                        <h3 class="font-semibold mb-2">Undercover Truth</h3>
+                        <p class="text-sm text-gray-300">Aalekh Original Movie</p>
+                    </div>
+                </div>
+                <div class="content-card cursor-pointer rounded-lg overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fb90a365-0590-46e4-b762-08a8fbb5b44f.png" alt="Documentary exploring nature and wildlife conservation" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-gray-800">
+                        <h3 class="font-semibold mb-2">Wild Harmony</h3>
+                        <p class="text-sm text-gray-300">Aalekh Original Documentary</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="text-red-600 text-2xl font-bold mb-4">AALEKH</div>
+                <p class="text-gray-400">The ultimate streaming experience with exclusive content and premium features.</p>
+            </div>
+            
+            <div>
+                <h3 class="font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">TV Shows</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Movies</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Kids</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-semibold mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Device Support</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-semibold mb-4">Connect</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-700">
+            <p class="text-gray-400 text-sm text-center">© 2024 Aalekh Streaming Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('input[type="text"]');
+            
+            searchInput.addEventListener('focus', function() {
+                this.style.width = '256px';
+            });
+            
+            searchInput.addEventListener('blur', function() {
+                if (this.value === '') {
+                    this.style.width = '128px';
+                }
+            });
+            
+            // Add hover effects to content cards
+            const cards = document.querySelectorAll('.content-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
